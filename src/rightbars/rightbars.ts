@@ -466,22 +466,20 @@ export class Rightbars {
             }
         }
         if(type=='soilder'){
-            debugger
-            switch(j){
-                case 0:
-                    canbuild = player1.money - 200 >= 0 //解放军 TODO 这里写死 应该要引用TODO--
-                    break;
-                case 1:
-                    canbuild = player1.money - 300 >= 0 //工程师 TODO 这里写死 应该要引用TODO--
-                    break;
-                    // case 2:
-                    //     canbuild = player1.money - 250 >= 0 //间谍 TODO 这里写死 应该要引用TODO--
-                    //     break;
-                default:
-                    break;
-
-
-            }
+          // debugger
+          switch (j) {
+            case 0:
+              canbuild = player1.money - 200 >= 0; //解放军 TODO 这里写死 应该要引用TODO--
+              break;
+            case 1:
+              canbuild = player1.money - 300 >= 0; //工程师 TODO 这里写死 应该要引用TODO--
+              break;
+            // case 2:
+            //     canbuild = player1.money - 250 >= 0 //间谍 TODO 这里写死 应该要引用TODO--
+            //     break;
+            default:
+              break;
+          }
         }
         if(type=='tank'){
             switch(j){

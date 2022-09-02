@@ -54,7 +54,6 @@ export class Timemanager {
     }
     //初始化的建造
     beginningBuilding() {
-
         // powerstation soliderfactory wcf oil prismtower
         if (this.looptime == 1) {
             //1s 后修建第一个 电场

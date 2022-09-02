@@ -53,7 +53,7 @@ this.initLeftcoverpictures();
               try{
                 items[j].style.left = '200px';
                 j++;
-                debugger
+                
                 if(j==items.length){
                     clearInterval(timer);
                     setTimeout(()=>{
@@ -147,8 +147,10 @@ this.initLeftcoverpictures();
         <div class="leftwrapper" style="flex-shrink:0">
         <canvas width="4480" height="1400" id="canvas1" style="background: black;"></canvas>
         <canvas width="4480"  height="1400" style="position: absolute;top:0px;z-index:3" id="canvas2"></canvas>
+        <canvas width="4480"  height="1400" style="position: absolute;top:0px;z-index:3" id="canvasunit"></canvas>
         <!-- canvas3 fog 层 -->
         <canvas width="4480"  height="1400" style="position: absolute;top:0px;z-index:4;" id="canvas3"></canvas>
+        <canvas width="4480"  height="1400" style="position: absolute;top:0px;z-index:4;" id="canvas8"></canvas>
         <canvas width="4480"  height="1400" style="position: absolute;top:0px;z-index:5;" id="canvasclick"></canvas>
         
         <div id="back" style="display: flex;z-index: -1;width:4480px;"></div>
@@ -222,7 +224,7 @@ this.initLeftcoverpictures();
        
         <script>
           //！注意  以后的事件绑定请使用addEventlistner
-        </script>`
+        </script>`;
         let template = document.createElement('div')
         template.innerHTML = this.worldDom;
         for(let j=0;j<template.children.length;j++){

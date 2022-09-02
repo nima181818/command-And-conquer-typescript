@@ -144,28 +144,75 @@ class Buildinglayer {
 
         // Powerstation,Soliderfactory,Oil
         switch (this.type_name) {
-            case 'stpowertation':
-                
-                let powerstation = new Powerstation('player1', 10, '20', buildinglocation, 'powertation', this.unitcontext, size);
-                break;
-            case 'stinfantry':
-                let soliderfactory1 = new Soliderfactory('player1', 10, '20', buildinglocation, 'soliderfactory',  this.unitcontext, size);
-                break;
-            case 'stoil':
-                let oil = new Oil('player1', 10, '20', buildinglocation, 'oil',  this.unitcontext, size);
-                break;
-            case 'stwcf':
-                let wcf = new Wcf('player1', 10, '20', buildinglocation, 'wcf',  this.unitcontext, size);
-                break;
-            case 'gdprismtower':
-                debugger
-                let prismtower = new Prismtower('player1', 10, '20', buildinglocation, 'prismtower',  this.unitcontext, size);
-                break;
-            case 'gdprismtower':   //TODO __这里是哨所炮还未做
-                let gdsentrycannon = new Sentrycannon('player1', 10, '20', buildinglocation, 'sentrycannon',  this.unitcontext, size);
-                break;
-            default:
-                break;
+          case "stpowertation":
+            let powerstation = new Powerstation(
+              "player1",
+              10,
+              "20",
+              buildinglocation,
+              "powertation",
+              this.unitcontext,
+              size
+            );
+            break;
+          case "stinfantry":
+            let soliderfactory1 = new Soliderfactory(
+              "player1",
+              10,
+              "20",
+              buildinglocation,
+              "soliderfactory",
+              this.unitcontext,
+              size
+            );
+            break;
+          case "stoil":
+            let oil = new Oil(
+              "player1",
+              10,
+              "20",
+              buildinglocation,
+              "oil",
+              this.unitcontext,
+              size
+            );
+            break;
+          case "stwcf":
+            let wcf = new Wcf(
+              "player1",
+              10,
+              "20",
+              buildinglocation,
+              "wcf",
+              this.unitcontext,
+              size
+            );
+            break;
+          case "gdprismtower":
+            // debugger
+            let prismtower = new Prismtower(
+              "player1",
+              10,
+              "20",
+              buildinglocation,
+              "prismtower",
+              this.unitcontext,
+              size
+            );
+            break;
+          case "gdprismtower": //TODO __这里是哨所炮还未做
+            let gdsentrycannon = new Sentrycannon(
+              "player1",
+              10,
+              "20",
+              buildinglocation,
+              "sentrycannon",
+              this.unitcontext,
+              size
+            );
+            break;
+          default:
+            break;
         }
         //迎合图片加载的时间
         setTimeout(() => {

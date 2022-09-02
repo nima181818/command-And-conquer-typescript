@@ -139,51 +139,67 @@ export class Prismtower extends Structure {
         // }, 16.6)
     }
     clearLine(sintheta, costheta) {
-
-    let ps = {
-        x:this.positions.x+this.size.x*0.5,
-        y:this.positions.y+20
-    },
+      let ps = {
+          x: this.positions.x + this.size.x * 0.5,
+          y: this.positions.y + 20,
+        },
         pte = {
-            x:this.attacktarget.currentclickpoints.x - ps.x,
-            y: this.attacktarget.currentclickpoints.y - ps.y
+          x: this.attacktarget.currentclickpoints.x - ps.x,
+          y: this.attacktarget.currentclickpoints.y - ps.y,
         },
-        
         pteel = {
-            x:pte.x/this.squalCaculator(pte)?pte.x/this.squalCaculator(pte,true):0,
-            y:pte.y/this.squalCaculator(pte)?pte.y/this.squalCaculator(pte,true):0,  //单位向量
+          x:
+            pte.x / this.squalCaculator(pte)
+              ? pte.x / this.squalCaculator(pte, true)
+              : 0,
+          y:
+            pte.y / this.squalCaculator(pte)
+              ? pte.y / this.squalCaculator(pte, true)
+              : 0, //单位向量
         },
-        rtw = 1.5/Math.abs(sintheta)?1.5/Math.abs(sintheta):2,
-        rth = 3/Math.abs(costheta)?3/Math.abs(costheta):2,
-        apart = 1.5/Math.abs(sintheta*costheta)?1.5/Math.abs(sintheta*costheta):2,
-        alllength = this.pointDistance(ps,this.attacktarget.currentclickpoints,true),
-        clearcounts = alllength/apart?alllength/apart:0;
-        debugger
-        for(let j=0;j<clearcounts;j++){
-            let x = ps.x + apart*j*pteel.x,
-                y = ps.y + apart*j*pteel.y
-            this.ctx.fillRect(x, y, rtw, rth)
-        }
+        rtw = 1.5 / Math.abs(sintheta) ? 1.5 / Math.abs(sintheta) : 2,
+        rth = 3 / Math.abs(costheta) ? 3 / Math.abs(costheta) : 2,
+        apart =
+          1.5 / Math.abs(sintheta * costheta)
+            ? 1.5 / Math.abs(sintheta * costheta)
+            : 2,
+        alllength = this.pointDistance(
+          ps,
+          this.attacktarget.currentclickpoints,
+          true
+        ),
+        clearcounts = alllength / apart ? alllength / apart : 0;
+      // debugger
+      for (let j = 0; j < clearcounts; j++) {
+        let x = ps.x + apart * j * pteel.x,
+          y = ps.y + apart * j * pteel.y;
+        this.ctx.fillRect(x, y, rtw, rth);
+      }
 
-        return
-        console.log('cao ')
-        let raylength = this.pointDistance({ x: this.positions.x + this.size.x * 0.5, y: this.positions.y + 20 }, this.attacktarget.currentclickpoints, true),
-            retanclewidth = (1.5 / sintheta) ? (1.5 / sintheta) : 0,
-            retancleheight = (2 * 1.5 / costheta) ? (2 * 1.5 / costheta) : 0,
-            counst = raylength / (1.5 / (sintheta * costheta)),
-            x1 = this.positions.x + this.size.x * 0.5,
-            y1 = this.positions.y + 20,
-            x2 = this.attacktarget.currentclickpoints.x,
-            y2 = this.attacktarget.currentclickpoints.y,
-
-            cleartimes = 0;
-        for (let j = 0; j < Math.abs(counst); j++) {
-            let x = (this.positions.x + this.size.x) + cleartimes * retanclewidth,
-                y = (((sintheta / costheta) ? sintheta / costheta : 0) * x) + (x1 * y2 - x2 * y1) / (x1 - x2),
-                width = retanclewidth,
-                height = retancleheight
-            this.ctx.clearRect(x, y, Math.abs(width), Math.abs(height));
-            cleartimes++;
-        }
+      return;
+      console.log("cao ");
+      let raylength = this.pointDistance(
+          { x: this.positions.x + this.size.x * 0.5, y: this.positions.y + 20 },
+          this.attacktarget.currentclickpoints,
+          true
+        ),
+        retanclewidth = 1.5 / sintheta ? 1.5 / sintheta : 0,
+        retancleheight = (2 * 1.5) / costheta ? (2 * 1.5) / costheta : 0,
+        counst = raylength / (1.5 / (sintheta * costheta)),
+        x1 = this.positions.x + this.size.x * 0.5,
+        y1 = this.positions.y + 20,
+        x2 = this.attacktarget.currentclickpoints.x,
+        y2 = this.attacktarget.currentclickpoints.y,
+        cleartimes = 0;
+      for (let j = 0; j < Math.abs(counst); j++) {
+        let x = this.positions.x + this.size.x + cleartimes * retanclewidth,
+          y =
+            (sintheta / costheta ? sintheta / costheta : 0) * x +
+            (x1 * y2 - x2 * y1) / (x1 - x2),
+          width = retanclewidth,
+          height = retancleheight;
+        this.ctx.clearRect(x, y, Math.abs(width), Math.abs(height));
+        cleartimes++;
+      }
     }
 }

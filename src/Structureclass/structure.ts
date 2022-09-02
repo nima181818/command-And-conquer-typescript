@@ -184,7 +184,7 @@ class Structure {
         }
     animationMthod() {
         if(this.name=='prismtower'){
-            debugger
+          // debugger
         }
           if((!this.alive)||(!this.readyforselfanimation)){
             this.index = this.animationendstart;

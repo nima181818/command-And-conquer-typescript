@@ -487,7 +487,7 @@ console.log(unit,"444")
             break;
     }
     //   unit.setTankspoints(aggregation.x, aggregation.y, 'setendpoints', true, true);
-    unit.paint(player.topUnitscanvas)
+    unit.paint(player.vehiclecanvas)
     }
     //生成兵种
     generateSoilder(type:string='player1') {
@@ -513,7 +513,7 @@ console.log(unit,"444")
                 break;
         }
         //   unit.setTankspoints(aggregation.x, aggregation.y, 'setendpoints', true, true);
-        unit.paint(player.topUnitscanvas)
+        unit.paint(player.vehiclecanvas)
     }
 
     //采取在出生点环状生产的方式

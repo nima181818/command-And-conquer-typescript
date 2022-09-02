@@ -25,7 +25,7 @@ import {Littlewindow} from './rightbars/littlewindow'
 
 import {Player} from './player'
 import {Timemanager} from './enemyai'
-const map = require('./assets/map.jpg');
+const map = require("./assets/map.png");
 const mapobstacle = require('./mapobstacle.json');
  class World {
   size: sizes
