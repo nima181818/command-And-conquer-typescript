@@ -173,3 +173,23 @@ body>img{
     width:200px;
     /* border:1px solid red; */
 }
+#progressBarrender {
+    width: 400px;
+    height: 25px;
+    background: white;
+    margin: auto;
+    margin-top: 40vh;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#progressBarrender>div {
+    height: 25px;
+    background: black;
+}
+
+#progressBarrender>span {
+
+    position: relative;
+    line-height: 25px;
+}

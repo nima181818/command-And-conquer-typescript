@@ -43,6 +43,7 @@ export class Player {
 
       this.powernumber -= value;
     }
+    this.powernumber = this.powernumber || 0;
     if (this.unittype == "player1") {
       powerel.innerHTML = this.powernumber.toString();
     }

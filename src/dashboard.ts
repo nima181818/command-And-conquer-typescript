@@ -74,7 +74,9 @@ this.initLeftcoverpictures();
       
         }.bind(this)
         gamedescription.onclick=function(){
-           alert('本游戏取材于命令与征服：红色警戒2，精简了原游戏60%的功能，保留了RTS最本质的游戏体验：建造与攻击，游戏处于Alpha阶段，我仅代表个人开发者向红色警戒这款经典游戏致敬！')
+           alert(
+             "本游戏取材于命令与征服：红色警戒2，精简了原游戏90%的功能，保留了RTS最本质的游戏体验：建造与攻击，游戏处于Alpha阶段，我仅代表个人开发者向红色警戒这款经典游戏致敬！"
+           );
         }
         aboutgame.onclick=function(){
             alert('完善开发中')
