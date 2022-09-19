@@ -121,7 +121,12 @@ class Buildinglayer {
             this.canvas.removeEventListener('mousemove', this.mouseMovehandler);
             this.canvas.removeEventListener('click', this.mouseClickhandler);
             //清楚绿色待建造区
-            this.context.clearRect(buildinglocation.x, buildinglocation.y, this.size.width + 2, this.size.height)
+            this.context.clearRect(
+              buildinglocation.x - 5,
+              buildinglocation.y - 5,
+              this.size.width + 2 + 5,
+              this.size.height + 5
+            );
             //开始建造了
             this.newStructures();
         } else {

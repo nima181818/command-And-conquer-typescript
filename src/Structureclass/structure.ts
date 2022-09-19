@@ -211,7 +211,12 @@ class Structure {
                     // if(this.name=='prismtower'){
                     //     console.log(showindex)
                     // }
-                    this.ctx.clearRect( this.positions.x,this.positions.y-2, this.size.x, this.size.y+3);
+                    this.ctx.clearRect(
+                      this.positions.x,
+                      this.positions.y - 2,
+                      this.size.x,
+                      this.size.y + 3
+                    );
                     this.ctx.drawImage(this.imgList[showindex], this.positions.x, this.positions.y, this.size.x, this.size.y);
                     this.index+=this.circletime;
                     if (this.index > end) {

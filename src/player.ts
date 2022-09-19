@@ -374,6 +374,7 @@ export class Player {
         }
       }.bind(this);
       let timer;
+      // 多选框
       canvas2.onmousemove = function (e) {
         if (!timer) {
           timer = setTimeout(() => {
@@ -381,13 +382,12 @@ export class Player {
               let width = ((e.offsetX - pages.x) ** 2) ** 0.5,
                 height = ((e.offsetY - pages.y) ** 2) ** 0.5;
               //绘制区域
-
-              context.clearRect(
-                pages.x - 1,
-                pages.y - 1,
-                width + 2,
-                height + 2
-              );
+              // 清除区域
+              let clearwidth = 0;
+              let clearheight = 0;
+              clearwidth = Math.max(oldposition.x, width);
+              clearheight = Math.max(oldposition.y, height);
+              context.clearRect(pages.x - 1, pages.y - 1, 5000, 5000);
               context.strokeStyle = "white";
               context.strokeRect(pages.x, pages.y, width, height);
               oldposition = {
