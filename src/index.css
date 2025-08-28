@@ -1,0 +1,199 @@
+* {
+    margin: 0
+}
+body{
+    display: flex;
+}
+.dashboard{
+    /* color:red
+     */
+     display: flex;
+     width:1350px;
+     height:600px;
+     margin:auto;
+     margin-top:calc(50vh - 300px);
+     justify-content: center;
+}
+.dashboard .leftradios{
+    width: 750px;
+    height: 600px;
+    background: black;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-left: 38px;
+}
+
+.leftradios .sons{
+   width:664px;
+   height:600px;
+   overflow: hidden;
+}
+.sons>img{
+    width: 1221px;
+    height: 816px;
+    position: relative;
+    left: -192px;
+    top: -59px;
+}
+.dashboard .rightselections{
+    width:200px;
+    height:600px;
+    
+}
+.rightselections .top1{
+    width:200px;
+    height:215px;
+}
+.selectionslist{
+    cursor: pointer;
+    overflow: hidden;
+}
+.selectionslist .menu_items{
+    width: 200px;
+    position: relative;
+    height: 53px;
+    left:0;
+    font-size:21px;
+    text-align: center;
+    line-height: 53px;
+    color: yellow;
+    border-top: 2px solid white;
+    background-image: url(./assets/covers/selection_items.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 53px;
+    transition:left 0.2s
+}
+.world{
+    display: flex;
+    margin:auto;
+    margin-top:calc(50vh - 300px);
+}
+.leftwrapper{
+    max-width:750px;
+    height:600px;
+    overflow:scroll;
+    position: relative;
+}
+.moneyandpower{
+    display: flex;
+
+}
+.powers,
+.tops{
+    
+    text-align: right;
+   
+    font-size:19px;
+    color:rgb(255,253,1);
+    background: black;
+    font-weight: bold;
+    flex:1;
+    
+
+}
+.powers{
+    text-align: left;
+}
+.stlist,.guardlist,.soilderlist,.wartanklist{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.wartanklist>div,
+.soilderlist>div,
+.guardlist>div,
+.stlist>div{
+    width:100px;
+    height:100px;
+    background: rgb(0,0,0,0.8);
+    box-sizing: border-box;
+    padding:2px;
+    
+}
+.wartanklist>div>img,
+.soilderlist>div>img,
+.guardlist>div>img,
+.stlist>div>img{
+    width:100%;
+    height:100%;
+}
+.playground{
+    width:200px;
+    height:200px;
+    padding:10px;
+    box-sizing: border-box;
+    background: black;
+}
+.wrappers{
+    border:1px solid rgb(255,253,1);
+    width:100%;
+    height:100%;
+    background: white;
+}
+.bars{
+    width:100%;
+    height:50px;
+    display: flex;
+    background:-webkit-gradient(linear, 0 0, 100% 0, from(rgb(204,201,210)), to(rgb(255,251,250)))
+}
+.items{
+    width:50px;
+    height:50px;
+
+}
+.items>img{
+    width: 80%;
+    height: 80%;
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+}
+#back {
+  
+    height: 1000px;
+    width: 1000px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    box-sizing: border-box;
+    padding-bottom: 520px;
+    display: none;
+}
+
+#back>div {
+    flex-shrink: 0;
+}
+body>img{
+    display: none;
+}
+.rightcontainer{
+    color:red;
+    width:200px;
+    /* border:1px solid red; */
+}
+#progressBarrender {
+    width: 400px;
+    height: 25px;
+    background: white;
+    margin: auto;
+    margin-top: 40vh;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#progressBarrender>div {
+    height: 25px;
+    background: black;
+}
+
+#progressBarrender>span {
+
+    position: relative;
+    line-height: 25px;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Shortcut Icon" href="./src/assets/titleicon.ico" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Red alert</title>
+    <style >
+        @import url('./src/index.css');
+      
+    </style>
+    <script src="public/localforage.js"></script>
+</head>
+
+<body>
+    <div class="innercanvascontainer" style="overflow: hidden;width:1px;height:1px;position: absolute;top:0;left:0;"></div>
+    <!-- canvas图层：
+    0层：地图层
+    1层 UNIt层
+    2层 fog层
+    3层 选择层 -->
+    
+    <script src="./app.js"></script>
+   <script>
+    window.cacheimgsrc = {};
+     window.saveImgToBase64 = async (img)=>{
+        let canvas =document.createElement('canvas');
+        await new Promise((resolve)=>{
+            setTimeout(()=>{
+                resolve(true)
+            },100)
+          
+        })
+        let innercanvascontainer = document.querySelector('.innercanvascontainer')
+        innercanvascontainer.appendChild(canvas)
+          canvas.width = img.width;
+          canvas.height = img.height;
+          canvas.style.position = 'fixed';
+          canvas.style.left = '10000px';
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0);
+          const base64String = canvas.toDataURL('image/png');
+          localforage.setItem(img.src,base64String)
+            await new Promise((resolve)=>{
+            setTimeout(()=>{
+                resolve(true)
+            },100)
+          
+        })
+            innercanvascontainer.removeChild(canvas)
+        
+     }
+    //    console.log=()=>{ }
+//        function unicodeToChar(text) {
+//    return text.replace(/\\u[\dA-F]{4}/gi, 
+//           function (match) {
+//                return String.fromCharCode(parseInt(match.replace(/\\u/g, ''), 16));
+//           });
+// }
+//        window.onload = function(){
+        
+//           let template = document.createElement('div')
+//            template.innerHTML = unicodeToChar(strings);
+//            console.dir(template)
+//            for(let j=0;j<template.children.length;j++){
+//             var y=template.children[j].cloneNode(true);  
+//             document.body.appendChild(y)
+//            }
+     
+//        }
+   </script>
+</body>
+
+</html>
