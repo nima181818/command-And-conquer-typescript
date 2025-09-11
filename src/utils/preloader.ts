@@ -663,22 +663,21 @@ export class Preloader {
       var img = new Image();
       img.addEventListener("load", loadHandler);
       //@ts-ignore
-      let value = await localforage.getItem(src.default);
-       //@ts-ignore
-       if(value) {
-         window.cacheimgsrc[src.default] = value;
+      // let value = await localforage.getItem(src.default);
+      //  //@ts-ignore
+      //  if(value) {
+      //    window.cacheimgsrc[src.default] = value;
 
-       }
-      img.src = value || src.default;
-     console.log(value?"油脂":"我的",src.default,"看下默认的路径")
+      //  }
+      img.src = src.default;
       //   document.body.appendChild(img);
       img.addEventListener("error", loadError);
       function loadHandler() {
         resolve(img);
-        if(value){
-          return;
-        }
-       window.saveImgToBase64(img)
+      //   if(value){
+      //     return;
+      //   }
+      //  window.saveImgToBase64(img)
       }
       function loadError(e) {
         console.log(e,src,"看下那个图片加载失败了")
